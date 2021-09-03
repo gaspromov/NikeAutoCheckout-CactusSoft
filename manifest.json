@@ -1,0 +1,38 @@
+{
+   "manifest_version": 2,
+   
+   "name": "Nike ACO by CactusSoft",
+   "description": "Autofill for Nike. He fills out all the necessary fields on the Nike checkout.",
+   "version": "1.0.0",
+   "version_name": "Beta .0.0",
+   "author": "CactusSoft",
+
+    "browser_action": {
+      "default_icon": "./assets/images/logo.png",
+      "default_popup": "./popup/auth/auth.html"
+    },
+
+    "icons": {
+       "128": "./assets/images/logo.png"
+    },
+
+    "content_scripts": [ {
+       "all_frames": true,
+       "js": [ "./scripts/fill.js", "./scripts/atc.js", "./scripts/webhook.js" ],
+       "match_about_blank": true,
+       "matches": [ "*://gs.nike.com/*", "*://gs-payments.nike.com/*", "*://nike.com/ru/launch/t/*", "*://www.nike.com/ru/launch/t/*"],
+       "run_at": "document_start"
+    }],
+    
+    "permissions": [ 
+      "storage", 
+      "system.cpu",
+      "system.memory",
+      "system.storage",
+      "tabs",
+      "activeTab",
+      "webRequest",
+      "webRequestBlocking"
+   ]
+}
+ 

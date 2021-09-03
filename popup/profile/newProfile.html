@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./newProfile.css">
+    <script src="../shared.js"></script>
+</head>
+<body class="newProfile">
+    <main >
+
+        <div class="back">
+            <h4>Profile</h4>
+            <a href="../index/index.html?tab=profiles"><img src="/assets/img/arrow-newProfile.svg" alt="Back" class="pointer"></a>
+        </div>
+
+        <form class="data" method="dialog">
+
+            <div class="card">
+                
+                <div class="delivery">
+                    <div class="head">
+                        <h2>Отправка</h2>
+                        <div class="express-mode">
+                            <label for="express">Express mode</label>
+                            <input type="checkbox" name="express" id="express">
+                        </div>
+                    </div>
+    
+                    <div class="inputs" id="inputs">
+                        <div class="columns-2">
+                        <input type="text" class="standart-input" name="firstName" id="firstName" placeholder="Имя " required>
+                        <input type="text" class="standart-input" name="middleName" id="middleName" placeholder="Отчество" required>
+                        </div>
+                        
+                        <input type="text" class="standart-input" name="lastName" id="lastName" placeholder="Фамилия" required>
+                        
+                        <input type="text" class="standart-input" name="addressLine1" placeholder="Строка адреса 1 " id="addressLine1" required>
+                
+                        <input type="text" class="standart-input" name="addressLine2" placeholder="Строка адреса 2 " id="addressLine2">
+    
+                        <input type="text" class="standart-input" name="city" id="city" placeholder="Город/населенный пункт" required>
+    
+                        <div class="columns-2 postCode">
+                            <select name="region"  class="standart-input" id="region" required>
+                                <option value="" disabled selected hidden>Область</option> <option  value="3: RU-MOW">Москва</option><option  value="4: RU-SPE">Санкт-Петербург</option><option  value="5: RU-STA">Ставропольский</option><option  value="6: RU-AL">Алтайский</option><option  value="7: RU-BA">Башкортостан</option><option  value="8: RU-BEL">Белгородская</option><option  value="9: RU-CHE">Челябинская</option><option  value="10: RU-DA">Дагестан</option><option  value="11: RU-KHA">Хабаровский</option><option  value="12: RU-KHM">Ханты-Мансийский Автономный округ - Югра</option><option  value="13: RU-YAR">Ярославская</option><option  value="14: RU-IRK">Иркутская</option><option  value="15: RU-KLU">Калужская</option><option  value="16: RU-KEM">Кемеровская</option><option  value="17: RU-KDA">Краснодарский</option><option  value="18: RU-KYA">Красноярский</option><option  value="19: RU-LEN">Ленинградская</option><option  value="20: RU-MO">Мордовия</option><option  value="21: RU-MOS">Московская</option><option  value="22: RU-NIZ">Нижегородская</option><option  value="23: RU-NGR">Новгородская</option><option  value="24: RU-NVS">Новосибирская</option><option  value="25: RU-OMS">Омская</option><option  value="26: RU-ORE">Оренбургская</option><option  value="27: RU-ORL">Орловская</option><option  value="28: RU-PER">Пермский</option><option  value="29: RU-PRI">Приморский</option><option  value="30: RU-RYA">Рязанская</option><option  value="31: RU-ROS">Ростовская</option><option  value="32: RU-SA">Саха (Якутия)</option><option  value="33: RU-SAM">Самарская</option><option  value="34: RU-SAR">Саратовская</option><option  value="35: RU-SMO">Смоленская</option><option  value="36: RU-SVE">Свердловская</option><option  value="37: RU-TA">Татарстан</option><option  value="38: RU-TYU">Тюменская</option><option  value="39: RU-TOM">Томская</option><option  value="40: RU-TUL">Тульская</option><option  value="41: RU-TVE">Тверская</option><option  value="42: RU-UD">Удмуртская</option><option  value="43: RU-VLA">Владимирская</option><option  value="44: RU-VGG">Волгоградская</option><option  value="45: RU-VOR">Воронежская</option>
+                            </select>
+            
+                            <input type="text" class="standart-input" name="postCode" id="postCode" placeholder="Индекс" required>
+                        </div>
+        
+                        <div class="columns-2">
+    
+                            <input type="text" class="standart-input" name="phone" placeholder="Телефон" id="phone" value="+7" pattern=".{12}" required>
+            
+                            <input type="email"  class="standart-input" name="email" placeholder="Почта " id="email" required>
+    
+                        </div>
+    
+    
+                    </div>
+                </div>
+    
+                <div class="payment">
+                    <div class="head">
+                        <h2>Оплата</h2>
+                    </div>
+    
+                    <div class="inputs">
+                        <input type="text" class="standart-input" name="cardNumber" id="cardNumber" placeholder="Номер карты" required>
+        
+                        <input type="text" class="standart-input" name="cardExpiry" id="cardExpiry" placeholder="Дата" required>
+    
+                        <input type="text" class="standart-input" name="cardCvc" id="cardCvc" placeholder="CVC" required>
+    
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="profileName card">
+                <input type="text" class="standart-input" name="profileName" id="profileName" placeholder="Profile name" required>
+                <button class="standart-btn" id="save">Save</button>
+            </div>
+
+        </form>
+    </main>
+    
+
+    <script src="../auth.js"></script>
+    <script src="./newProfile.js"></script>
+</body>
+</html>

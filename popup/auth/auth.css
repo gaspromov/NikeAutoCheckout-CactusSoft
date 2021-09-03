@@ -1,0 +1,27 @@
+body{
+    grid-template-rows: 1fr;
+}
+.auth{
+    display: grid;
+    row-gap: 15px;
+    align-self: center;
+    justify-self: center;
+    place-items: center;
+}
+
+.auth .logo img{
+    width: 100px;
+}
+
+.auth .way{display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px;}
+
+form{
+    display: grid;
+    row-gap: 10px;
+    place-items: center;
+    padding-top: 10px;
+}
+
+form input{
+    width: 260px !important;
+}

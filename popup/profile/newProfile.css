@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700&display=swap');
+
+input[type="checkbox"]{
+    margin: 0;
+}
+label{
+    cursor: pointer;
+}
+
+.none{
+    display: none !important;
+}
+*{transition: .3s;}
+
+.back{
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+}
+select{
+    color: white;
+}
+option{color: white !important}
+.back a{
+    justify-self: end;
+}
+.standart-input{
+    height: 33px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.standart-btn{
+    height: 33px;
+    font-size: 12px;
+}
+main{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 5px;
+    padding: 16px 30px 0px;
+}
+
+.data{
+    display: grid;
+    row-gap: 25px;
+    align-items: start;
+}
+
+.data>div{display: grid; row-gap: 10px;}
+
+.columns-2{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+}
+
+.columns-2:first-child{grid-template-columns: 1fr 120px;}
+.columns-2.postCode{grid-template-columns: 1fr 90px;}
+.columns-2:last-child{grid-template-columns: 1fr 90px;}
+
+.head{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    cursor: pointer;
+}
+
+.head h2{
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Vollkorn SC', serif !important;
+}
+
+.express-mode{
+    justify-self: end;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 5px;
+    align-self: center;
+    justify-self: center;
+
+    justify-items: center;
+    align-items: center;
+
+    font-size: 14px;
+}
+
+.inputs{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+/* .inputs input, .inputs select{ */
+    /* background-color: white;
+    height: 30px; 
+    padding: 0px; 
+    padding-left: 10px; 
+    margin: 0px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    border: 2px solid rgba(255, 255, 255, 0) */
+/* } */
+.inputs select{padding-left: 5px;}
+.payment .inputs{grid-template-columns: 155px 61px 44px;}
+.payment input:last-child, .payment input:nth-child(2){padding: 0px; text-align: center;}
+
+.profileName{display: grid; grid-template-columns: auto 115px; column-gap: 10px;}
+.profileName input{color: white;}
+
+
+.no-valid{
+    border: 1px solid#C83A3A !important
+}
+
+.profileName .no-valid{ border: 1px solid #C83A3A !important}

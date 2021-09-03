@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nike ACO</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./auth.css">
+</head>
+<body>
+
+    <div class="auth">
+        <div class="logo">
+            <img src="/assets/images/logo.svg " alt="logo">
+        </div>
+        <div class="card">
+
+            <div class="way">
+                <button class="standart-btn outline-btn active" id="keyWay">Key</button>
+                <button class="standart-btn outline-btn" id="importWay">Import</button>
+            </div>
+            <form action="" method="dialog" id="keyWay" class="active">
+                <div class="inputUname">
+                    <h4 style="text-align: center;">License key</h4>
+                    <input type="text" class="standart-input" name="key" autocomplete="off" id="key" placeholder="Enter the key">
+                </div>
+
+                <button type="submit" class="standart-btn" style="justify-self: stretch;" id="auth">Activate</button>
+            </form>
+    
+            <form method="dialog" id="importWay" class="none import">
+                <div class="inputUname">
+                    <h4 style="text-align: center;">Import</h4>
+                    <textarea name="import" class="standart-textarea" id="importInput" placeholder="Paste data" style="height: 129px;"></textarea>
+                </div>
+                <button class="standart-btn" style="justify-self: stretch;">Import</button>
+            </form>
+
+        </div>
+        
+    </div>
+
+    <div class="notification" id="notification">
+
+    </div>
+
+    <script src="../auth.js"></script>
+    <script src="../shared.js"></script>
+    <script src="./auth.js"></script>
+</body>
+</html>

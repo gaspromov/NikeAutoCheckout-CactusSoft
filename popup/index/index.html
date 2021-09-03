@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike ACO</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../shared.js"></script>
+</head>
+<body>
+    
+    <header>
+        <ul>
+            <li class="pointer active" id="release">Drop</li>
+            <li class="pointer" id="profiles">Profiles</li>
+            <li class="pointer" id="settings">Settings</li>
+        </ul>
+    </header>
+
+    <section id="release" class=" active">
+
+        <div class="item card">
+            <form method="dialog">
+                <div class="inputUname">
+                    <h4>Item link</h4>
+                    <input type="text" class="standart-input" name="link" id="checkoutLink" placeholder="nike.com/ru/launch/t/sb-dunk-low-pro-dark-grey" autocomplete="off">
+                </div>
+                <div class="inputUname">
+                    <h4>Size</h4>
+
+                    <div class="twoInOne">
+                        <input type="text" name="size" id="size" autocomplete="off" placeholder="11.5">
+                        <span class="typeSize">Us<span>
+                    </div>
+
+                </div>
+                <button type="submit" class="standart-btn" id="saveCheckout">Save</button>
+            </form>
+
+        </div>
+
+        <div class="checkoutTime card">
+            <form method="dialog">
+                <h4>Checkout time</h4>
+                <a class="standart-btn outline-btn active" id="accurateTime">Accurate</a>
+                <a class="standart-btn outline-btn " id="randomTime">Random</a>
+                <input type="text" class="standart-input" name="time" id="time" autocomplete="off" placeholder="21:59:58:000" >
+                <span class="minus accurate" id="timeMinus">-</span>
+                <input class="standart-input accurate" id="timeSecond" autocomplete="off" placeholder="21:59:59:500"  style="transition: .2s;" >
+                <button type="submit" class="standart-btn" style="grid-column: 1/3; margin-top: 10px;">Save</button>
+            </form>
+        </div>
+
+        <div class="card goCheckout" style="padding: 13px 30px;">
+            <a target="_blank" class="standart-btn" id="checkout">Go to checkout</a>
+        </div>
+
+
+        
+    </section>
+
+    <section id="profiles" class="">
+        <div class="head-profiles card">
+            <a class="standart-btn" href="../profile/newProfile.html">Add profile</a>
+            <div class="search">
+                <input type="text" class="standart-input" autocomplete="off" placeholder="Search" id="search">
+                <img src="/assets/img/search.svg">
+            </div>
+        </div>
+
+        <div class="profiles card" style="padding: 20px 10px 20px 30px;">
+            <div class="activeProfile"></div>
+            <span class="hr"></span>
+            <div class="others">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="settings" class="">
+        
+        <div class="webhook card">
+            <form method="dialog">
+                <div class="inputUname">
+                    <h4>Webhook</h4>
+                    <input type="text" class="standart-input" id="webhook" placeholder="URL">
+                </div>
+                <button class="standart-btn">Save</button>
+            </form>
+        </div>
+
+        <div class="data card">
+            <form class="import" method="dialog">
+                <div class="inputUname">
+                    <h4>Import</h4>
+                    <textarea name="import" class="standart-textarea" id="import" placeholder="Paste data"></textarea>
+                </div>
+                <button class="standart-btn">
+                    <!-- <img src="/assets/img/import.svg">  -->
+                    Import</button>
+            </form>
+            <form class="export" method="dialog">
+                <div class="inputUname">
+                    <h4>Export</h4>
+                    <button class="standart-btn" style="width: 100%;">
+                        <!-- <img src="/assets/img/export.svg"> -->
+                        Export
+                    </button>
+                </div>
+                <textarea type="text" id="dataExport" class="hidden"></textarea>
+            </form>
+        </div>
+
+        <div class="card logout" style="padding: 5px 30px; display: grid; place-items: center;">
+            <a id="logout" style="text-decoration: underline; font-size: 14px;">LogOut</a>
+        </div>
+
+    </section>
+
+
+    <div class="notification" id="notification">
+
+    </div>
+    <script src="../auth.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
